@@ -1,38 +1,521 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Scroll bar and html */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  overflow-x: hidden;
+  background: black;
+}
+
+/* Navbar design */
+
+.my-navbar {
+  width: 100%;
+  background: black !important;
+  padding: 1rem 6rem;
+}
+
+ul.navbar-nav li a {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  font-weight: 900;
+  color: #fff !important;
+}
+
+a.navbar-brand {
+  font-size: 4rem;
+  color: #fff;
+}
+a.navbar-brand:hover {
+  color: #fff;
+}
+
+a.navbar-brand span {
+  color: #a50a0a;
+}
+
+.container-fluid.navbar {
+  background: black !important;
+  border-bottom: 0.1rem solid #a50a0a;
+}
+
+ul.navbar-nav li:hover a {
+  color: #a50a0a !important;
+}
+
+button.navbar-toggler {
+  background: #a50a0a !important;
+}
+
+button.navbar-toggler:hover {
+  background: #a50a0a !important;
+}
+
+/* Homepage */
+section.homepage {
+  width: 100%;
+  height: 90vh;
+  background: url("../public/images/heroBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p.home-subtitle {
+  color: #a50a0a;
+  font-size: 2rem;
+}
+
+h1.home-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+button.btn {
+  border: 0.2rem solid #a50a0a;
+  padding: 2rem 6rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.homepage .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+button.btn:hover {
+  color: #fff;
+  border-color: #5c0101;
+}
+
+/* About page */
+
+section.aboutpage {
+  background: #0c0c0c;
+  padding-top: 5rem;
+}
+
+h2.page-title {
+  width: 300px;
+  margin: auto;
+  font-size: 4rem;
+  border-bottom: 0.3rem solid #a50a0a;
+  border-radius: 1.3rem;
+}
+
+.title {
   text-align: center;
+  color: #fff;
+  font-size: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container.about-container {
+  margin-top: 7rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2.about-intro-title {
+  color: #a50a0a;
+  font-size: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p.about-intro {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.skills {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skills h2 {
+  color: #fff;
+}
+
+.progress-bar {
+  height: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: #dddddd80;
+}
+
+.progress-bar .javascript {
+  height: 1rem;
+  background: #a50a0a;
+  width: 90%;
+}
+
+.progress-bar .cpp {
+  height: 1rem;
+  background: #a50a0a;
+  width: 97%;
+}
+
+.progress-bar .python {
+  height: 1rem;
+  background: #a50a0a;
+  width: 60%;
+}
+
+.progress-bar .django {
+  height: 1rem;
+  background: #a50a0a;
+  width: 47%;
+}
+
+.progress-bar .java {
+  height: 1rem;
+  background: #a50a0a;
+  width: 82%;
+}
+
+/* Activities page */
+
+section#activities {
+  margin-top: 7rem;
+
+  background: #000;
+}
+
+.container.activities-container {
+  margin-top: 5rem;
+}
+
+.container.activities-container .row .box {
+  padding: 5rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.container.activities-container .row .box i {
+  font-size: 5rem;
+  color: #a50a0a;
+}
+
+.container.activities-container .row .box h2 {
+  font-size: 3rem;
+  color: #e9e9e9;
+}
+
+.container.activities-container .row .box .box-desc {
+  color: #8f8e8e;
+  font-size: 1.4rem;
+}
+
+.container.activities-container .row .box:hover {
+  border: 1px solid #a50a0a;
+}
+
+/* Team page */
+
+section#team {
+  margin-top: 7rem;
+}
+
+.container.team-container {
+  margin-top: 7rem;
+}
+
+.box {
+  padding: 5rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  gap: 2rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.container.team-container .row .box:hover {
+  border: 1px solid #a50a0a;
+}
+
+.col-lg-4.col-10.box img {
+  width: 250px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #a50a0a;
+}
+
+.team-container .row .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-container .row .box h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.team-container .row .box h4 {
+  color: #a50a0a;
+}
+
+.team-container .row .box p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.icon-box {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-box i {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+i.fa-brands.fa-facebook:hover {
+  color: #3b5998;
+}
+
+i.fa-brands.fa-twitter:hover {
+  color: #00acee;
+}
+
+i.fa-brands.fa-google-plus-g:hover {
+  color: #db4a39;
+}
+
+/* Contact page */
+
+section#contact {
+  margin-top: 7rem;
+}
+
+.container.contact-section-1 {
+  margin-top: 7rem;
+}
+
+h2.section1-title {
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+}
+
+p.section1-subtitle {
+  text-align: center;
+  color: #a50a0a;
+  font-size: 2rem;
+}
+
+.container.contact-info {
+  margin-top: 7rem;
+}
+
+.col-md-4.contact-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.row.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container.contact-info .row .col-10 {
+  margin: auto;
+}
+
+.col-lg-4.contact-box i {
+  font-size: 4rem;
+  color: #a50a0a;
+}
+
+.col-lg-4.contact-box h4 {
+  font-size: 3rem;
+  color: #a50a0a;
+}
+
+p.contact-box-info {
+  text-align: center;
+}
+
+.contact-box {
+  text-align: center;
+}
+.col-lg-4.contact-box p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.container-fluid.contact-section-2 {
+  background: #0c0c0c;
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+h2.section2-title {
+  text-align: center;
+  padding-top: 3rem;
+  color: #fff;
+  font-size: 4rem;
+}
+
+p.section2-subtitle {
+  text-align: center;
+  color: #a50a0a;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+form.contact-form input {
+  height: 5rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #a50a0a;
+  outline: none;
+  width: 100%;
+  color: #fff;
+}
+
+form.contact-form textarea {
+  height: 16rem;
+  font-size: 2rem;
+  padding: 2rem;
+  background: transparent;
+  border: 1px solid #a50a0a;
+  outline: none;
+  width: 100%;
+  color: #fff;
+}
+
+/* Footer */
+footer#footer {
+  padding: 4rem 0;
+  border-top: 1px solid #a50a0a;
+}
+
+p.copyright-status {
+  color: #fff;
+}
+
+a.privacy {
+  text-decoration: none;
+  color: #fff;
+}
+
+.col-md-12.col-10 p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+  /* Navbar */
+  .my-navbar {
+    padding: 1rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Homepage */
+  .homepage .container {
+    align-items: center;
+  }
+  h1.home-title {
+    text-align: center;
+  }
+
+  /* Aboutpage */
+  .about-box-left {
+    margin-bottom: 4rem;
+  }
+  .about-box-right {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* Contact */
+  input.firstname {
+    margin-bottom: 1rem;
+  }
+
+  input.email {
+    margin-bottom: 1rem;
+  }
+
+  input.phone {
+    margin-bottom: 1rem;
+  }
+
+  /* footer */
+  .footer-icons {
+    justify-content: center;
   }
 }
