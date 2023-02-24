@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dummyit/static/css/main.2974777b.css",
+    "main.js": "/dummyit/static/js/main.fea04ec4.js",
+    "static/media/heroBg.jpg": "/dummyit/static/media/heroBg.dcd5571e83bc218e13a3.jpg",
+    "index.html": "/dummyit/index.html",
+    "main.2974777b.css.map": "/dummyit/static/css/main.2974777b.css.map",
+    "main.fea04ec4.js.map": "/dummyit/static/js/main.fea04ec4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2974777b.css",
+    "static/js/main.fea04ec4.js"
+  ]
+}
