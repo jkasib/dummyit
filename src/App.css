@@ -311,15 +311,15 @@ section#team {
   transition: 0.3s all linear;
 }
 
-i.fa-brands.fa-facebook:hover {
+.icon-box i.fa-brands.fa-facebook:hover {
   color: #3b5998;
 }
 
-i.fa-brands.fa-twitter:hover {
+.icon-box i.fa-brands.fa-twitter:hover {
   color: #00acee;
 }
 
-i.fa-brands.fa-google-plus-g:hover {
+.icon-box i.fa-brands.fa-google-plus-g:hover {
   color: #db4a39;
 }
 
